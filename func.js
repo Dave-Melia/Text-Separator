@@ -9,7 +9,7 @@ function change() {
     var string_input = (document.getElementById('string_input')).value;
 
     // Breaks string_input up in to an array
-    var stringArray = string_input.split('\n');
+    var stringArray = string_input.replace(/^\s+|\s+$/g, '').split(/\s+/);
 
     // Assigns variable to comma
     var radio_comma = document.getElementById("radioComma").value;
@@ -38,8 +38,6 @@ function change() {
 
     // Displays formatted string
     document.getElementById("string_output").value = (string_output);
-    console.log(string_output);
-
 };
 
 

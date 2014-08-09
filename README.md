@@ -7,8 +7,9 @@ TO-DO
 =====
 
 Add conditioning to ignore white space <br>
-Add to split() function to array spaces as well as new line
-Add more features
-Improve design
+Add to split() function to array spaces as well as new line <br>
+Add more features <br>
+Improve design <br>
+Improve code <br>
 
 

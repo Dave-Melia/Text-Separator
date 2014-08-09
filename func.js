@@ -5,35 +5,20 @@ Array.prototype.toSingleQuotedString = function () {
 
 // Main function to ammend inputted strings
 function change() {
- 	// Assigns textarea to id "string_input"
-    var string_input = (document.getElementById('string_input')).value;
+    var string_input = (document.getElementById('string_input')),
+        stringArray = string_input.value.replace(/^\s+|\s+$/g, '').split(/\s+/),
+        radio_comma = document.getElementById("radioComma"),
+        radio_singlequote = document.getElementById("radioSingleQuote"),
+        radio_dash = document.getElementById("radioDash");
 
-    // Breaks string_input up in to an array
-    var stringArray = string_input.replace(/^\s+|\s+$/g, '').split(/\s+/);
-
-    // Assigns variable to comma
-    var radio_comma = document.getElementById("radioComma").value;
-
-    // Assigns variable to single quote
-    var radio_singlequote = document.getElementById("radioSingleQuote").value;
-
-    // Assigns variable to dash
-    var radio_dash = document.getElementById("radioDash").value;
-
-    
-    
-    // If radio button 1 is selected, join a comma to the end of the string
-    if (document.getElementById("radioComma").checked) {
-    	string_output = stringArray.join(radio_comma);
-    // If radio button 2 is selected, join a single quote to the end of the string
+    if (radio_comma.checked) {
+        string_output = stringArray.join(radio_comma.value);
     } 
-    // If radio button 2 is selected, join a single quote to the end of the string
-    else if (document.getElementById("radioSingleQuote").checked) {
+    else if (radio_singlequote.checked) {
         string_output = stringArray.toSingleQuotedString();
     }
-    // If radio button 3 is selected, join a dash to the end of the string
-    else if (document.getElementById("radioDash").checked) {
-        string_output = stringArray.join(radio_dash);
+    else if (radio_dash.checked) {
+        string_output = stringArray.join(radio_dash.value);
     }
 
     // Displays formatted string

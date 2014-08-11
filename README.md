@@ -7,6 +7,7 @@ TO-DO
 =====
 Add more features <br>
 Improve design <br>
+Add 'Copy to clipboard' <br>
 
 Changelog
 =========

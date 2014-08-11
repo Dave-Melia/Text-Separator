@@ -16,3 +16,4 @@ Added to split() function with replace() function and changed regex to array spa
 Added maxLength condition to stringArray to limit the input of Array elements <br>
 Minor HTML Tweaks <br>
 JS revamping <br>
+Resigned page <br>

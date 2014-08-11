@@ -7,56 +7,82 @@
 	<script type="text/javascript" src="func.js"></script>
 </head>
 	<body>
-					<!-- START NAV -->
-					<nav class="navbar navbar-inverse" role="navigation">
-						<h2>Text Separator</h2>
-					</nav><!-- END NAV -->
+			<!-- START NAV -->
+			<nav class="navbar navbar-inverse" role="navigation">
+				<h2>Text Separator</h2>
+			</nav><!-- END NAV -->
+
+
+
 			<div id="wrap">
 				<div id="main">
-					<!-- START col-xs-4 DIV -->
-					<div class="col-xs-4">
-						<label>Input</label>
-						<textarea id="string_input" type="text" rows="20" cols="20" class="form-control"></textarea>
-					</div><!-- END col-xs-4 DIV-->
-					
-					<!-- START col-xs-4 DIV -->					
-					<div class="col-xs-4">
-						<label>Output</label>
-						<textarea id="string_output" type="text" rows="20" cols="20" class="form-control"></textarea>
-					</div><!-- END col-xs-4 DIV -->
 
-					<!-- START Radio 1 DIV -->
-					<div class="radio">
-					  <label>
-					    <input type="radio" name="optionsRadios" id="radioComma" value="," checked>
-					    Comma Separator
-					  </label>
-					</div><!-- END RADIO DIV -->
+					<!-- START INPUT DIV -->
+					<div class="panel-wrap">
+						<div class="panel panel-info">
+						  <div class="panel-heading">Input</div>
+						  <div class="panel-body">
+						    <textarea id="string_input" type="text" rows="20" cols="20" class="form-control"></textarea>
+						  </div>
+						</div>
+					</div>
+					<!-- END INPUT DIV -->
 
-					<!-- START Radio 2 DIV -->
-					<div class="radio">
-					  <label>
-					    <input type="radio" name="optionsRadios" id="radioSingleQuote" value="'">
-					    Single Quote Separator (with comma)
-					  </label>
-					</div><!-- END RADIO DIV -->
+					<!-- START OUTPUT DIV -->
+					<div class="panel-wrap">
+						<div class="panel panel-info">
+						  <div class="panel-heading">Output</div>
+						  <div class="panel-body">
+						    <textarea id="string_output" type="text" rows="20" cols="20" class="form-control"></textarea>
+						  </div>
+						</div>
+					</div>
+					<!-- END OUTPUT DIV -->
 
-					<!-- START Radio 3 DIV -->
-					<div class="radio">
-					  <label>
-					    <input type="radio" name="optionsRadios" id="radioDash" value="-">
-					    Dash Separator
-					  </label>
-					</div><!-- END RADIO DIV -->
+					<!-- START RADIO BUTTONS PANEL -->
+					<div class="panel-wrap">
+						<div class="panel panel-info">
+						  <div class="panel-heading">Options</div>
+						  <div class="panel-body">
+						<!-- START Radio 1 DIV -->
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="radioComma" value="," checked>
+							    Comma Separator
+							  </label>
+							</div><!-- END RADIO DIV -->
 
-					<!-- START Button DIV -->
-					<div id="button" class="col-sm-offset-0 col-sm-10">
-		      			<button type="button" class="btn btn-success" onclick="change()">Submit</button>
+							<!-- START Radio 2 DIV -->
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="radioSingleQuote" value="'">
+							    Single Quote Separator (with comma)
+							  </label>
+							</div><!-- END RADIO DIV -->
 
-		      			<button type="button" class="btn btn-danger" onclick="clearText()">Clear</button>
-		      		</div><!-- END Button DIV -->
-		      	</div>
-		    </div>	
+							<!-- START Radio 3 DIV -->
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="radioDash" value="-">
+							    Dash Separator
+							  </label>
+							</div><!-- END RADIO DIV -->
+
+
+						  </div>
+						</div>					
+
+						<div id="button" class="panel-info">
+		      				<button type="button" class="btn btn-success" onclick="change()">Submit</button>
+
+		      				<button type="button" class="btn btn-danger" onclick="clearText()">Clear</button>
+		      			</div><!-- END Button DIV -->
+					</div>
+					<!-- END RADIO BUTTONS PANEL -->
+
+
+		      	</div> <!-- END MAIN DIV -->
+		    </div>	<!-- END WRAP DIV -->
 
 		    <div id="footer">
 		      	<p>&copy; Copyright 2014 - Dave Melia </p>

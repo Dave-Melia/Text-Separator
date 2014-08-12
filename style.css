@@ -14,17 +14,27 @@ p, h1, h2, h3, h4, h5 {
 
 h2 {
 	margin: 14px;
+	width: 200px;
 }
 
 textarea {
     resize: none;
 }
 
+a:link, a:hover, a:active, a:visited  {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.navbar {
+	background-color: #434F5B;
+}
+
 .navbar-inverse {
 	color: #FFFFFF;
 	border-radius: 0px;
-  	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 0px 8px rgba(28,97,151, 0.8);
-          	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 0px 8px rgba(28,97,151, 0.8);
+  	-webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, .15), 0 0px 10px rgba(138,184,57, 0.8);
+          	box-shadow: inset 0 2px 0 rgba(255, 255, 255, .15), 0 1px 10px rgba(138,184,57, 0.8);
 }
 
 #wrap {
@@ -32,7 +42,7 @@ textarea {
 }
 
 #main {
-	overflow:auto;
+	overflow: auto;
 	padding-bottom: 30px;
 }  
 
@@ -61,7 +71,7 @@ textarea {
 
 #footer {
 	position: relative;
-	clear:both;
+	clear: both;
 	color: #ACACAC;
 	padding-left: 10px;
 } 
@@ -78,8 +88,19 @@ textarea {
 	border-radius: 0px;
 }
 
+.panel {
+	border-top-color: #7ca533;
+	border-color: #7ca533;
+}
+
 .panel-wrap {
-	position:relative;
-	min-height:1px;
+	position: relative;
+	min-height: 1px;
 	float: left;
+}
+
+.panel-info>.panel-heading {
+	color: #FFFFFF;
+	background-color: #8AB839;
+	border-color: #7ca533;
 }

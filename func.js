@@ -10,7 +10,7 @@ function change() {
         stringArray = string_input.value.replace(/^\s+|\s+$/g, '').split(/\s+/),
         radio_comma = document.getElementById("radioComma"),
         radio_singlequote = document.getElementById("radioSingleQuote"),
-        radio_dash = document.getElementById("radioDash");
+        radio_dash = document.getElementById("radioDash"),
         maxLength = 600;
 
     if (radio_comma.checked) {

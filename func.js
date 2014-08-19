@@ -1,29 +1,57 @@
-// Function to ammend string with single quotes and a comma
+// Function to amend array with commas
+Array.prototype.toComma = function () {
+    return this.join(",");
+}
+
+// Function to amend array with dashes
+Array.prototype.toDash = function () {
+    return this.join("-");
+}
+
+// Function to amend array with single quotes and a comma
 Array.prototype.toSingleQuotedString = function () {
   return "'" + this.join("','") + "'";
+}
+
+// Function to amend string with semi-colons
+Array.prototype.toSemiColon = function () {
+    return this.join(";");
 }
 
 // Main function to ammend inputted strings
 function change() {
 
     var string_input = (document.getElementById('string_input')),
-        stringArray = string_input.value.replace(/^\s+|\s+$/g, '').split(/\s+/),
-        radio_comma = document.getElementById("radioComma"),
-        radio_singlequote = document.getElementById("radioSingleQuote"),
-        radio_dash = document.getElementById("radioDash"),
+        radio_comma = document.getElementById('radioComma'),
+        radio_singlequote = document.getElementById('radioSingleQuote'),
+        radio_dash = document.getElementById('radioDash'),
+        radio_semi = document.getElementById('radioSemi'),
         maxLength = 600;
 
+    // Regex radio conditions
+    if (radioWhitespace.checked) {
+        stringArray = string_input.value.replace(/^\s+|\s+$/g, '').split(/\s+/);
+    } 
+    else if (radioNewline.checked) {
+        stringArray = string_input.value.replace(/^\n+|\n+$/g, '').split(/\n+/);
+    }
+
+
+    // Text formatting radio conditions
     if (radio_comma.checked) {
-        string_output = stringArray.join(radio_comma.value);
+        string_output = stringArray.toComma();
     } 
     else if (radio_singlequote.checked) {
         string_output = stringArray.toSingleQuotedString();
     }
     else if (radio_dash.checked) {
-        string_output = stringArray.join(radio_dash.value);
+        string_output = stringArray.toDash();
+    }
+    else if (radio_semi.checked) {
+        string_output = stringArray.toSemiColon();
     }
 
-    // Displays formatted string
+    // Displays formatted array providing the input is less than maxLength
     if(stringArray.length <= maxLength){
         document.getElementById("string_output").value = (string_output);
     } else {

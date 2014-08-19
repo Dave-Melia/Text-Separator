@@ -49,10 +49,12 @@ a:link, a:hover, a:active, a:visited  {
 
 #string_input {
 	float: left;
+	height: 480px;
 }
 
 #string_output {
 	float: left;
+	height: 480px;
 }
 
 #button {

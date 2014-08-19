@@ -3,7 +3,7 @@
 <head>
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
-
+	<title>Text Separator</title>
 	<script type="text/javascript" src="func.js"></script>
 </head>
 	<body>
@@ -39,54 +39,112 @@
 					</div>
 					<!-- END OUTPUT DIV -->
 
-					<!-- START RADIO BUTTONS PANEL -->
+					<!-- START REXEG PANEL -->
 					<div class="panel-wrap">
 						<div class="panel panel-info">
-						  <div class="panel-heading">Options</div>
+						  
+						  <div class="panel-heading">
+						  	Regex
+						  </div>
+						  
+
 						  <div class="panel-body">
-						<!-- START Radio 1 DIV -->
+
+							<!-- START REMOVE WHITESPACE DIV -->
+							<div class="radio">
+							  <label>
+							    <input name="regex" type="radio" name="optionsRadios" id="radioWhitespace" checked>
+							    Remove Whitespace
+							  </label>
+							</div>
+							<!-- END REMOVE WHITESPACE DIV -->
+
+
+							<!--START REMOVE NEWLINE-->
+							<div class="radio">
+							  <label>
+							    <input name="regex" type="radio" name="optionsRadios" id="radioNewline">
+							    Remove Newline
+							  </label>
+							</div>
+							<!-- END RADIO DIV -->
+
+						  </div> <!-- END PANEL-BODY -->
+
+						</div>
+					</div>
+					<!-- END REGEX PANEL -->
+
+					<!-- START SEPARATION OPTIONS PANEL -->
+					<div class="panel-wrap">
+						<div class="panel panel-info">
+
+						  <div class="panel-heading">
+						  	Separation Options
+						  </div>
+						  
+
+						  <div class="panel-body">
+						<!-- START COMMA DIV -->
 							<div class="radio">
 							  <label>
 							    <input type="radio" name="optionsRadios" id="radioComma" value="," checked>
-							    Comma Separator
+							    Comma
 							  </label>
-							</div><!-- END RADIO DIV -->
+							</div><!-- END COMMA DIV -->
 
-							<!-- START Radio 2 DIV -->
+
+							<!-- START SINGLE QUOTE DIV -->
 							<div class="radio">
 							  <label>
 							    <input type="radio" name="optionsRadios" id="radioSingleQuote" value="'">
-							    Single Quote Separator (with comma)
+							    Single Quote (with comma)
 							  </label>
-							</div><!-- END RADIO DIV -->
+							</div>
+							<!-- END SINGLE QUOTE DIV -->
 
-							<!-- START Radio 3 DIV -->
+
+							<!-- START DASH DIV -->
 							<div class="radio">
 							  <label>
 							    <input type="radio" name="optionsRadios" id="radioDash" value="-">
-							    Dash Separator
+							    Dash
+							  </label>
+							</div>
+							<!-- END DASH DIV -->
+
+
+							<!-- START SEMI-COLON DIV -->
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="radioSemi" value="-">
+							    Semi-Colon
 							  </label>
 							</div><!-- END RADIO DIV -->
 
+						  </div> <!-- END BODY PANEL DIV -->
 
-						  </div>
-						</div>					
+						</div> <!-- END PANEL PANEL-INFO DIV -->
 
+
+						<!-- START BUTTONS DIV -->
 						<div id="button" class="panel-info">
 		      				<button type="button" class="btn btn-success" onclick="change()">Submit</button>
 
 		      				<button type="button" class="btn btn-danger" onclick="clearText()">Clear</button>
-		      			</div><!-- END Button DIV -->
-					</div>
-					<!-- END RADIO BUTTONS PANEL -->
+		      			</div>
+		      			<!-- END ButtonS DIV -->
+					</div> <!-- END SEPARATION OPTIONS PANEL -->
 
 
 		      	</div> <!-- END MAIN DIV -->
 		    </div>	<!-- END WRAP DIV -->
 
+
 		    <div id="footer">
 		      	<p>&copy; Copyright 2014 - Dave Melia </p>
 		    </div>
+
 
 	</body>
 </html>

@@ -21,12 +21,13 @@ Array.prototype.toSemiColon = function () {
 // Main function to ammend inputted strings
 function change() {
 
-    var string_input = (document.getElementById('string_input')),
-        radio_comma = document.getElementById('radioComma'),
-        radio_singlequote = document.getElementById('radioSingleQuote'),
-        radio_dash = document.getElementById('radioDash'),
-        radio_semi = document.getElementById('radioSemi'),
-        maxLength = 600;
+    var doc                 = document,
+        string_input        = doc.getElementById('string_input'),
+        radio_comma         = doc.getElementById('radioComma'),
+        radio_singlequote   = doc.getElementById('radioSingleQuote'),
+        radio_dash          = doc.getElementById('radioDash'),
+        radio_semi          = doc.getElementById('radioSemi'),
+        maxLength           = 600;
 
     // Regex radio conditions
     if (radioWhitespace.checked) {
@@ -53,10 +54,10 @@ function change() {
 
     // Displays formatted array providing the input is less than maxLength
     if(stringArray.length <= maxLength){
-        document.getElementById("string_output").value = (string_output);
+        doc.getElementById("string_output").value = (string_output);
     } else {
-        document.getElementById("string_output").value = "";
-        document.getElementById("string_output").value = "Input limited to " + maxLength + ".  Please reduce and try again.";
+        doc.getElementById("string_output").value = "";
+        doc.getElementById("string_output").value = "Input limited to " + maxLength + ".  Please reduce and try again.";
     }
 };
 
